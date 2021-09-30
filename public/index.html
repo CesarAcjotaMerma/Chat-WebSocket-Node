@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="signup">
+    <div class="container-inp">
+      <input type="text" placeholder="Nombre de usuario" class="inp-main" id="inp-username">
+    </div>
+    <div class="container-inp">
+      <input type="text" placeholder="Nombre de la sala" class="inp-main" id="inp-room">
+    </div>
+    <div class="container-inp">
+      <input type="button" value="Entrar a la sala" class="inp-main" id="btn-signup">
+    </div>
+  </div>
+
+  <div class="container hidden" id="chat">
+    <div class="chat-container">
+      <div class="chat-header">
+        <label style="color:#fff;">Sala: </label>
+          <strong><p style="color:#fff; margin-left:5px;" id="room-name">Nombre de la sala</p></strong>
+      </div>
+      <div class="chat-messages">
+        <div class="chat-users-info" id="chat-users">
+        </div>
+        <div class="chat-message" id="chat-message">
+        </div>
+      </div>
+      <div class="chat-inp">
+        <input type="text" placeholder="Escribe tu mensaje..." class="inp-main" id="inp-message">
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
